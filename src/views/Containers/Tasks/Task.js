@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
 import './style.css';
 import { DiscretionCard, RevenueCard } from './components/Cards';
+import PropTypes from 'prop-types';
 
 const strings = {
     performance_summary: "Performance Summary"
 };
 
 class Task extends Component {
+    static propTypes = {
+        data: PropTypes.object
+    };
+
     render() {
+        if(!this.props.data) {
+            return (<div></div>)
+        }
+
         return (
             <div>
                 <div className={`details-section`}>
@@ -21,8 +30,12 @@ class Task extends Component {
                     </div>
 
 
-                    <DiscretionCard />
-                    <RevenueCard />
+                    <DiscretionCard
+                        data={this.props.data && this.props.data.discretion}
+                    />
+                    <RevenueCard
+                        data={this.props.data && this.props.data.revenue}
+                    />
                 </div>
             </div>
         );

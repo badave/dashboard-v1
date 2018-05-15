@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import SplitViewListbox from '@salesforce/design-system-react/components/split-view/listbox.jsx';
-import tasks from './mock/tasks.json';
+import PropTypes from 'prop-types';
 import ListItem from './ListItem';
 
 class ListView extends Component {
-    onSelect(item) {
-
-    }
+    static propTypes = {
+        onSelect: PropTypes.function
+    };
 
     render() {
-        const { tab } = this.props;
+        const { tab, tasks } = this.props;
 
         return (
             <SplitViewListbox
@@ -19,8 +19,11 @@ class ListView extends Component {
                 }}
                 listItem={ListItem}
                 events={{
-                    onSelect: (item) => this.onSelect(item)
+                    onSelect: (event, { item }) => {
+                        this.props.onSelect(item)
+                    }
                 }}
+                selection={[tasks[0]]}
                 options={tasks[tab.id]}
             />
         );
