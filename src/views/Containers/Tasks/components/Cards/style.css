@@ -10,6 +10,22 @@
     border: 1px solid #F2F3F6;
 }
 
+.details-ranking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-ranking button {
+    font-size: 0.85em;
+    color: #767A85;
+    border: none;
+}
+
+.details-ranking .slds-button:hover,
+.details-ranking .slds-button:focus {
+    color: #767A85;
+}
+
 .details-card-body {
     background-color: white;
     padding: 4px 6px;

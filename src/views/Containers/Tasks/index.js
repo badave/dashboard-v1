@@ -43,6 +43,7 @@ class View extends Component {
                                 state.selectedTask = task;
                                 this.setState(state);
                             }}
+                            selected={this.state.selectedTask}
                         />
                     </div>
                 )}

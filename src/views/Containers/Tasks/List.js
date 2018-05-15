@@ -5,11 +5,12 @@ import ListItem from './ListItem';
 
 class ListView extends Component {
     static propTypes = {
-        onSelect: PropTypes.function
+        onSelect: PropTypes.func,
+        selected: PropTypes.object
     };
 
     render() {
-        const { tab, tasks } = this.props;
+        const { tab, tasks, selected } = this.props;
 
         return (
             <SplitViewListbox
@@ -23,7 +24,7 @@ class ListView extends Component {
                         this.props.onSelect(item)
                     }
                 }}
-                selection={[tasks[0]]}
+                selection={[selected]}
                 options={tasks[tab.id]}
             />
         );

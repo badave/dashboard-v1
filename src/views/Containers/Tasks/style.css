@@ -28,7 +28,6 @@
     border: solid 1px #E3E6E9;
 }
 
-
 .slds-tabs--default__item.slds-active {
     background-color: #fff;
 }
@@ -78,6 +77,8 @@
     color: #B3BEB8;
 }
 
+.slds-split-view__list-item-action[aria-selected="true"],
+.slds-split-view__list-item-action[aria-selected="true"]:focus,
 .slds-split-view__list-item-action:focus {
     border: 1px solid #93ECC2;
     box-shadow: inset 0 0 0 1px #93ECC2;
@@ -198,4 +199,23 @@
 
 .details-info-bottom .details-info-stat-box:last-of-type .details-info-value {
     color: #EA4D4F;
+}
+
+.tabs-filter {
+    font-size: 0.95em;
+    color: #767A85;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0 5px;
+}
+
+.tabs-filter button {
+    color: #767A85;
+    border: none;
+}
+
+.tabs-filter .slds-button:hover,
+.tabs-filter .slds-button:focus {
+    color: #767A85;
 }

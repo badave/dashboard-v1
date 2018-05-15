@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './style.css';
 import { Line } from 'react-chartjs-2';
 
+import Dropdown from '@salesforce/design-system-react/components/menu-dropdown';
+import DropdownTrigger from '@salesforce/design-system-react/components/menu-dropdown/button-trigger';
+import Button from '@salesforce/design-system-react/components/button/';
+
 
 const strings = {
     title: `Revenue vs. target`,
@@ -63,7 +67,20 @@ class RevenueCard extends Component {
                     </div>
 
                     <div>
-                        <div className={`details-ranking`}>{strings.ranking}</div>
+                        <div className={`details-ranking`}>
+                            <div>{strings.ranking}</div>
+
+                            <Dropdown
+                                align="right"
+                                options={[
+                                    { label: 'Product family', value: 'products' },
+                                ]}
+                            >
+                                <DropdownTrigger>
+                                    <Button iconName="down" iconPosition="right" label="Product family" />
+                                </DropdownTrigger>
+                            </Dropdown>
+                        </div>
 
                         <div className={`details-info`}>
                             {["top", "bottom"].map((type) => (

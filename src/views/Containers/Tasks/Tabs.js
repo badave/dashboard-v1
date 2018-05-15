@@ -5,9 +5,20 @@ import TABS from './constants/Tabs.json';
 import ListView from './List';
 import PropTypes from 'prop-types';
 
+import Dropdown from '@salesforce/design-system-react/components/menu-dropdown';
+import DropdownTrigger from '@salesforce/design-system-react/components/menu-dropdown/button-trigger';
+import Button from '@salesforce/design-system-react/components/button/';
+
+const strings = {
+    sort: 'sort by'
+}
+
 class TaskTabs extends Component {
     static propTypes = {
-      tasks: PropTypes.object
+        tasks: PropTypes.object,
+        onTabSelect: PropTypes.func,
+        onItemSelect: PropTypes.func,
+        selected: PropTypes.object
     };
 
     renderLabel(tab) {
@@ -31,10 +42,24 @@ class TaskTabs extends Component {
                         label={this.renderLabel(tab)}
                         onSelect={this.props.onTabSelect}
                     >
+                        <div className={`tabs-filter`}>
+                            {strings.sort}
+                            <Dropdown
+                                align="right"
+                                options={[
+                                    { label: 'Deal Revenue', value: 'products' },
+                                ]}
+                            >
+                                <DropdownTrigger>
+                                    <Button iconName="down" iconPosition="right" label="Deal Revenue" />
+                                </DropdownTrigger>
+                            </Dropdown>
+                        </div>
                         <ListView
                             tab={tab}
                             tasks={this.props.tasks}
                             onSelect={this.props.onItemSelect}
+                            selected={this.props.selected}
                         />
                     </TabsPanel>
                 ))}
