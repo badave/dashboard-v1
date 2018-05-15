@@ -1,0 +1,10 @@
+[{
+  "id": "projects",
+  "name": "Projects"
+}, {
+  "id": "reports",
+  "name": "Reports"
+}, {
+  "id": "escalations",
+  "name": "Sales Escalations"
+}]

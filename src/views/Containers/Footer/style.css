@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0 30px 20px;
+}
+
+
+footer a.active {
+    color: white;
+}
+
+footer a {
+    color: #767A85;
+}
+
+footer a:hover {
+    color: white;
+}

@@ -1,0 +1,15 @@
+.logo {
+    height: 80px;
+    width: 65px;
+}
+
+.header {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.header-title {
+    padding-left: 15px;
+    font-weight: 600;
+}

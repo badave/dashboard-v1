@@ -1,0 +1,26 @@
+[{
+  "id": "dashboard",
+  "name": "Dashboard",
+  "icon": "dashboard",
+  "route": ""
+}, {
+  "id": "account",
+  "name": "My account planning",
+  "icon": "account",
+  "route": "account"
+}, {
+  "id": "activity",
+  "name": "My recent activity",
+  "icon": "activity",
+  "route": "activity"
+}, {
+  "id": "data",
+  "name": "My data",
+  "icon": "graph",
+  "route": "data"
+}, {
+  "id": "contacts",
+  "name": "My contacts",
+  "icon": "contact_list",
+  "route": "contacts"
+}]
