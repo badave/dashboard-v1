@@ -26,8 +26,8 @@ class View extends Component {
             <SplitView
                 id="task-view"
                 masterWidth={`35rem`}
-                master={
-                    (<div>
+                master={(
+                    <div>
                         <div className={`section-title`}>
                             {strings.title}
                         </div>
@@ -44,10 +44,13 @@ class View extends Component {
                                 this.setState(state);
                             }}
                         />
-                    </div>)}
-                detail={<Task
-                    data={this.state.selectedTask.data}
-                />}
+                    </div>
+                )}
+                detail={(
+                    <Task
+                        data={this.state.selectedTask.data}
+                    />
+                )}
             />
         );
     }

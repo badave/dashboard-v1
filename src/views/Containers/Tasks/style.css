@@ -104,10 +104,27 @@
     padding:0 10px;
     border-right: 1px solid #C3C8CC;
     color: #C3C8CC;
+    cursor: pointer;
+}
+
+.details-header .section-nav > div:hover {
+    color: #7E868F;
 }
 
 .details-header .section-nav > div:last-of-type {
     border-right: 0;
+    margin-right: 5px;
+}
+
+.details-header .section-nav .slds-icon {
+    transform: rotate(90deg);
+    fill: #ACB4BB;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.details-header .section-nav .slds-icon:hover {
+    fill: #7E868F;
 }
 
 
