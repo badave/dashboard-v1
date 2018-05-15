@@ -67,9 +67,9 @@ class RevenueCard extends Component {
 
                         <div className={`details-info`}>
                             {["top", "bottom"].map((type) => (
-                                <div className={`details-info-container details-info-${type}`}>
+                                <div key={type} className={`details-info-container details-info-${type}`}>
                                     {props.data[type].map((data) => (
-                                        <div className={`details-info-stat-box`}>
+                                        <div className={`details-info-stat-box`} key={data.name}>
                                             <div className={`details-info-name`}>{data.name}</div>
                                             <div className={`details-info-value`}>{data.value}</div>
                                         </div>

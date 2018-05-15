@@ -9,7 +9,28 @@
     align-items: center;
 }
 
+.header.collapse a, .header.collapse .header-title {
+    display: none;
+}
+
 .header-title {
     padding-left: 15px;
     font-weight: 600;
+}
+
+.collapse-icon {
+    color: #8B8E98;
+    font-size: 32px;
+    font-weight: 300;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.collapse-icon:hover {
+    color: white;
+}
+
+.nav-container.minimize .collapse-icon {
+    margin-left: 0;
+    padding:3px 20px;
 }

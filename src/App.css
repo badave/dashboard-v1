@@ -16,7 +16,7 @@ body {
   height: 100%;
 }
 
-a, a:hover, a:active, a:visited, a div, a:active div {
+a, a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
 }
 

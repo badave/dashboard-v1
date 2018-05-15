@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 class TaskTabs extends Component {
     static propTypes = {
-      tasks: PropTypes.array
+      tasks: PropTypes.object
     };
 
     renderLabel(tab) {

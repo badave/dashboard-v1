@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import logo from './assets/logo.png';
 import './style.css';
-
-// import Icon from '@salesforce/design-system-react/components/icon';
+import PropTypes from 'prop-types';
 
 const strings = {
     logo: "Dashboard Logo",
@@ -11,13 +10,23 @@ const strings = {
 };
 
 class Header extends Component {
-    collapseNavigation() {
+    static propTypes = {
+        collapse: PropTypes.bool,
+        onCollapse: PropTypes.func
+    };
 
+    onCollapse() {
+        this.props.onCollapse && this.props.onCollapse();
+    }
+
+    onExpand() {
+        this.props.onExpand && this.props.onExpand();
     }
 
     render() {
+        const { props } = this;
         return (
-            <div className={`header`}>
+            <div className={`header ${props.collapse ? `collapse`: ``}`}>
                 <Link to={'/'}>
                     <img src={logo}
                          alt={strings.logo}
@@ -27,9 +36,18 @@ class Header extends Component {
                 <div className={`header-title`}>
                     {strings.title}
                 </div>
-                <div onClick={() => this.collapseNavigation()}>
+                {!props.collapse ?
+                    (
+                        <div className={`collapse-icon`} onClick={() => this.onCollapse()}>
+                            &laquo;
+                        </div>
+                    ): (
+                        <div className={`collapse-icon`} onClick={() => this.onExpand()}>
+                            &raquo;
+                        </div>
+                    )
+                }
 
-                </div>
             </div>
         );
     }

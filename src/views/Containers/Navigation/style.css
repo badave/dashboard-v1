@@ -1,24 +1,46 @@
 .nav-container {
     background-color: #313540;
     height: 100%;
+    position: fixed;
+    transition: all 200ms;
 }
 
-nav {
-
-}
-
-nav a.active {
+.nav-container a.active {
     color: white;
     background-color: #252934;
     font-weight: 600;
 }
 
-nav a {
+.nav-container a {
     color: #767A85;
-    padding: 20px 30px;
-    display: block;
 }
 
-nav a:hover {
+.nav-container a:hover {
     color: white;
+}
+
+nav {
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    padding: 20px 15px;
+}
+
+nav .slds-icon_container {
+    margin-right: 15px;
+}
+
+.nav-container.minimize {
+    width: 54px;
+    overflow: hidden;
+}
+
+.nav-container.minimize footer {
+    display: none;
+}
+
+.nav-container.minimize .nav-text {
+    display: none;
 }

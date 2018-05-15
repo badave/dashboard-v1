@@ -3,6 +3,9 @@ footer {
     position: absolute;
     bottom: 0;
     padding: 20px 0 30px 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
 }
 
 
@@ -16,4 +19,13 @@ footer a {
 
 footer a:hover {
     color: white;
+}
+
+.nav-container footer .slds-icon {
+    fill: #9A9CA8;
+    cursor: pointer;
+}
+
+.nav-container footer .slds-icon:hover {
+    fill: white;
 }

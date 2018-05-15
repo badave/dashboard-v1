@@ -6,17 +6,17 @@
 }, {
   "id": "account",
   "name": "My account planning",
-  "icon": "account",
+  "icon": "maintenance_plan",
   "route": "account"
 }, {
   "id": "activity",
   "name": "My recent activity",
-  "icon": "activity",
+  "icon": "business_hours",
   "route": "activity"
 }, {
   "id": "data",
   "name": "My data",
-  "icon": "graph",
+  "icon": "data_integration_hub",
   "route": "data"
 }, {
   "id": "contacts",
