@@ -1,0 +1,116 @@
+
+.details-section {
+    padding-right: 20px;
+}
+
+.details-header {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-header .section-nav {
+    display: flex;
+}
+
+.details-header .section-nav > div {
+    font-size: 0.95em;
+    padding:0 10px;
+    border-right: 1px solid #C3C8CC;
+    color: #C3C8CC;
+    cursor: pointer;
+}
+
+.details-header .section-nav > div:hover {
+    color: #7E868F;
+}
+
+.details-header .section-nav > div:last-of-type {
+    border-right: 0;
+    margin-right: 5px;
+}
+
+.details-header .section-nav .slds-icon {
+    transform: rotate(90deg);
+    fill: #ACB4BB;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.details-header .section-nav .slds-icon:hover {
+    fill: #7E868F;
+}
+
+
+.details-chart {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.details-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-ranking {
+    color: #99A0A7;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+
+.details-info-stat-box {
+    width: 33%;
+    padding: 6px 8px;
+}
+
+.details-info-top .details-info-stat-box {
+    margin-top: 3px;
+    margin-bottom: 6px;
+    border-left: 3px solid #80DC87;
+    background-color: #E4F9E5;
+}
+
+.details-info-value {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.details-info-top .details-info-stat-box .details-info-value {
+    color: #82DE8A;
+}
+
+.details-info-top .details-info-stat-box:first-of-type {
+    border-left: 3px solid #84DA89;
+    background-color: #E4F9E5;
+}
+
+.details-info-top .details-info-stat-box:first-of-type .details-info-value {
+    color: #20C726;
+}
+
+.details-info-top .details-info-name {
+    color: #4A824C;
+    font-weight: 600;
+}
+
+
+.details-info-bottom .details-info-stat-box {
+    border-left: 3px solid #E83439;
+    background-color: #FEEEEE;
+}
+
+
+.details-info-bottom .details-info-name {
+    color: #9F4B4D;
+    font-weight: 600;
+}
+
+.details-info-bottom .details-info-stat-box .details-info-value {
+    color: #F5989A;
+}
+
+.details-info-bottom .details-info-stat-box:last-of-type .details-info-value {
+    color: #EA4D4F;
+}

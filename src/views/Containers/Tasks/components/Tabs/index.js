@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import { observer } from 'mobx-react';
 import Tabs from '@salesforce/design-system-react/components/tabs';
 import TabsPanel from '@salesforce/design-system-react/components/tabs/panel';
-import TABS from './constants/Tabs.json';
-import ListView from './List';
+import TABS from '../../constants/Tabs.json';
+import ListView from '../List/List';
 import PropTypes from 'prop-types';
+import './style.css';
+
+import UI from '../../../../../singletons/ui';
 
 import Dropdown from '@salesforce/design-system-react/components/menu-dropdown';
 import DropdownTrigger from '@salesforce/design-system-react/components/menu-dropdown/button-trigger';
@@ -11,7 +15,7 @@ import Button from '@salesforce/design-system-react/components/button/';
 
 const strings = {
     sort: 'sort by'
-}
+};
 
 class TaskTabs extends Component {
     static propTypes = {
@@ -28,19 +32,29 @@ class TaskTabs extends Component {
                 <div className={`tab-title`}>
                     {tab.name}
                 </div>
-                <div className={`tab-count`}>{tasks[tab.id].length}</div>
+                <div className={`tab-count`}>
+                    {tasks[tab.id].length}
+                    {!UI.tabs.get(tab.id) ? (<div className={`tab-unread`}></div>): undefined}
+                </div>
             </div>
         );
     }
 
+    componentDidMount() {
+        setTimeout(() => UI.tabs.set(TABS[0].id, true), 2000);
+    }
+
+    onTabSelect(index) {
+        UI.tabs.set(TABS[index].id, true);
+    }
+
     render() {
         return (
-            <Tabs>
+            <Tabs onSelect={(tab) => this.onTabSelect(tab)}>
                 {TABS.map((tab) => (
                     <TabsPanel
                         key={tab.id}
                         label={this.renderLabel(tab)}
-                        onSelect={this.props.onTabSelect}
                     >
                         <div className={`tabs-filter`}>
                             {strings.sort}
@@ -68,4 +82,4 @@ class TaskTabs extends Component {
     }
 }
 
-export default TaskTabs;
+export default observer(TaskTabs);

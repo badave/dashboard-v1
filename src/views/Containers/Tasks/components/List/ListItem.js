@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import formatMoney from '../../../utils/format-money';
+import formatMoney from '../../../../../utils/format-money';
 import moment from 'moment';
 
 const strings = {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style.css';
-import { DiscretionCard, RevenueCard } from './components/Cards';
+import { DiscretionCard, RevenueCard } from '../Cards';
 import PropTypes from 'prop-types';
 import Icon from '@salesforce/design-system-react/components/icon';
 

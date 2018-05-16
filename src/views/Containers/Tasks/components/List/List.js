@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SplitViewListbox from '@salesforce/design-system-react/components/split-view/listbox.jsx';
 import PropTypes from 'prop-types';
 import ListItem from './ListItem';
+import './style.css';
 
 class ListView extends Component {
     static propTypes = {

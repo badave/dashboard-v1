@@ -1,9 +1,11 @@
-import { extendObservable, observable } from 'mobx';
+import {extendObservable, observable} from 'mobx';
 
 class UI {
     constructor() {
         extendObservable(this, {
-           state: observable.map({})
+            state: observable.map({}),
+            tabs: observable.map({}),
+
         });
     }
 }

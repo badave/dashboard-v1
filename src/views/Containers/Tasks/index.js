@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Tabs from './Tabs';
+import Tabs from './components/Tabs';
 import SplitView from '@salesforce/design-system-react/components/split-view/index';
-import Task from '../../Containers/Tasks/Task';
+import Task from './components/Detail';
 import './style.css';
 import tasks from './mock/tasks.json';
 
