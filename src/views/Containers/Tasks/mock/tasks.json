@@ -151,6 +151,7 @@
       "revenue": 70000,
       "commission": 700,
       "date": "2017-08-11T01:00:58.421Z",
+      "important": true,
       "data": {
         "discretion": {
           "data": [5.5, 3.8, 6.13, 12.3],
@@ -367,6 +368,7 @@
       "revenue": 50000,
       "commission": 500,
       "date": "2015-07-11T01:00:58.421Z",
+      "important": true,
       "data": {
         "discretion": {
           "data": [55.5, 63.8, 86.13, 72.3],
@@ -585,6 +587,7 @@
       "revenue": 9000,
       "commission": 900,
       "date": "2017-08-11T01:00:58.421Z",
+      "important": true,
       "data": {
         "discretion": {
           "data": [55.5, 63.8, 86.13, 72.3],
@@ -875,6 +878,7 @@
       "revenue": 9000,
       "commission": 900,
       "date": "2017-08-11T01:00:58.421Z",
+      "important": true,
       "data": {
         "discretion": {
           "data": [55.5, 63.8, 86.13, 72.3],
@@ -1019,6 +1023,7 @@
       "revenue": 30000,
       "commission": 300,
       "date": "2017-11-17T01:00:58.421Z",
+      "important": true,
       "data": {
         "discretion": {
           "data": [55.5, 63.8, 86.13, 72.3],

@@ -15,3 +15,19 @@
     box-shadow: inset 0 0 0 1px #93ECC2;
     background-color: #EDFAF3;
 }
+
+.pad-right {
+    padding-right: 15px;
+}
+.list-item-priority {
+    margin-top: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #D7A335;
+    border-radius: 10px;
+    right: 15px;
+    position: absolute;
+}
+.list-item-priority.important {
+    background-color: #FB2544;
+}

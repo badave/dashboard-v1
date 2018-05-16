@@ -22,36 +22,37 @@ class ListItem extends Component {
             <div>
                 <div className="slds-grid slds-wrap list-item">
                     <span
-                      className="list-item-label slds-truncate slds-text-body_regular slds-text-color_default slds-size_2-of-5"
+                      className="list-item-label slds-truncate slds-text-body_regular slds-text-color_default slds-size_4-of-12"
                       title={item.label}
                     >
                         {item.label}
                     </span>
                     <span
-                        className="slds-truncate slds-size_1-of-5"
+                        className="slds-truncate slds-size_2-of-12"
                         title={strings.id}
                     >
                         {item.id}
                     </span>
                     <span
-                        className="slds-truncate slds-size_1-of-5"
+                        className="slds-truncate slds-size_3-of-12"
                         title={strings.contact_name}
                     >
                         {item.contact_name}
                     </span>
                     <span
-                        className="list-item-label slds-truncate slds-size_1-of-5 align-right"
+                        className="list-item-label slds-truncate slds-size_3-of-12 align-right pad-right"
                         title={strings.revenue}
                     >
                         {formatMoney(item.revenue)}
                     </span>
+                    <div className={`list-item-priority ${item.important ? `important`: ``}`} />
                 </div>
                 <div className="slds-grid slds-wrap list-item">
                     <span className="slds-truncate" title={strings.date}>
                         {moment(new Date(item.date)).format(`D MMM YYYY`)}
                     </span>
                     <span
-                        className="slds-truncate slds-col_bump-left lower-case"
+                        className="slds-truncate slds-col_bump-left lower-case pad-right"
                         title={strings.commission}
                     >
                         {`${strings.commission} ${formatMoney(item.commission)}`}
