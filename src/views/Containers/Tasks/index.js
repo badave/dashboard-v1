@@ -25,9 +25,9 @@ class View extends Component {
         return (
             <SplitView
                 id="task-view"
-                masterWidth={`35rem`}
+                masterWidth={`62.5%`}
                 master={(
-                    <div>
+                    <div className={`list-section`}>
                         <div className={`section-title`}>
                             {strings.title}
                         </div>

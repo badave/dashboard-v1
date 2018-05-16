@@ -13,3 +13,20 @@
     padding: 30px 20px;
     background-color: transparent;
 }
+
+.slds-split-view_container {
+    width: 60%;
+    border-right: 1px solid #E4E8EB;
+}
+
+.list-section {
+    height: 100%;
+}
+
+.slds-tabs--default {
+    min-height: 98%;
+}
+
+#task-view > .slds-grow {
+    padding-left: 0.5rem;
+}
