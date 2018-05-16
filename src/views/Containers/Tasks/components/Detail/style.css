@@ -5,7 +5,7 @@
 
 .details-header {
     font-size: 0.9em;
-    margin: 30px 0px;
+    margin: 30px 0 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
